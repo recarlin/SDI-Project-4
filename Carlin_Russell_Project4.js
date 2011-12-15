@@ -25,6 +25,9 @@ var tests = {
     separator: function(n,s,i) {
         var p = n.split(s)
         return p.join(i)
+    },
+    decimal: function(n) {
+        return n.toFixed(2)
     }
 };
-console.log(tests.separator("bacon,chicken,sausage" , "," , "/"))
+console.log(tests.decimal(1.2262))
