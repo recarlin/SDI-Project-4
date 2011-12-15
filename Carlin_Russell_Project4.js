@@ -15,12 +15,16 @@ var tests = {
         var p = /^(http:|https:)/
         return p.test(n)
     },
-    tCase: function(n) {
-        var s = n.split(" ")
+    upCase: function(n) {
+        var p = n.split(" ")
         for (i=0, l=s.length;i<l;i++) {
-            s[i] = s[i].slice(0,1).toUpperCase() + s[i].slice(1);
+            p[i] = p[i].slice(0,1).toUpperCase() + p[i].slice(1);
         };
-        return s.join(" ")
+        return p.join(" ")
+    },
+    separator: function(n,s,i) {
+        var p = n.split(s)
+        return p.join(i)
     }
 };
-console.log(tests.tCase("Are you watching?"))
+console.log(tests.separator("bacon,chicken,sausage" , "," , "/"))
