@@ -28,6 +28,14 @@ var tests = {
     },
     decimal: function(n) {
         return n.toFixed(2)
+    },
+    fuzzy: function(n,s,i) {
+        var l = s*i
+        if ((n >= s-l) && (n <= s+l)) {
+            return true
+        } else {
+            return false
+        };
     }
 };
-console.log(tests.decimal(1.2262))
+console.log(tests.fuzzy(10,10,.4))
