@@ -31,12 +31,11 @@ var tests = {
         var p = n.split(s)
         return p.join(i)
     },
-    //Project 1 missed a math equation
     //number - creates a fixed 2 digit decimal
     decimal: function(n) {
         return n.toFixed(2)
     },
-    //Project 1 missed a string escape
+    //Project 1 - missed a string escape
     //number, number to compare to, percent margin of error - finds the margin of error, true if both ends are true, false if one is not true
     fuzzy: function(n,s,i) {
         var l = s*i
@@ -45,6 +44,11 @@ var tests = {
         } else {
             return false
         };
+    },
+    //Project 1 - missed a math equation
+    //number - Well... This is pretty self explanatory, I think. stnc stands for "string to number conversion", by the way.
+    stnc: function(n) {
+        return parseInt(n)
     }
 };
 
@@ -55,4 +59,6 @@ console.log(tests.upCase("Hello, how are you?"))
 console.log(tests.separator("chicken/bacon/ranch", "/", ","))
 console.log(tests.decimal(9001.1111111))
 console.log(tests.fuzzy(7,10,.4))
+console.log(tests.stnc("9001"))
+
 
